@@ -29,8 +29,8 @@ Key objectives include:
 * Visualizing complex student data interactively and intuitively.
 * Uncovering the relationships between mental health, study routines, and exam results.
 * Facilitating data-driven discussions regarding student wellbeing.
-<img width="2840" height="1630" alt="Screenshot 2026-05-07 212114" src="https://github.com/user-attachments/assets/a5aa2ecd-1aba-4337-abb8-95fb505df3e9" />
 <img width="2802" height="1620" alt="Screenshot 2026-05-07 212011" src="https://github.com/user-attachments/assets/a7225672-bee2-4c48-a726-8e618a3690e3" />
+<img width="2840" height="1630" alt="Screenshot 2026-05-07 212114" src="https://github.com/user-attachments/assets/a5aa2ecd-1aba-4337-abb8-95fb505df3e9" />
 <img width="2854" height="1620" alt="Screenshot 2026-05-07 212207" src="https://github.com/user-attachments/assets/b97155ee-0857-49f9-910d-7c95d767dc0a" />
 
 
