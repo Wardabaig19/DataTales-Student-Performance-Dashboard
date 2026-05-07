@@ -23,7 +23,9 @@ To create an interactive dashboard that visualizes the correlations between stud
 The project utilizes the "Student Habits vs Academic Performance" dataset from Kaggle. Comprising 1,000 unique records, it captures a comprehensive view of student life, including demographic traits, daily habits, and final exam scores.
 
 ### The Dashboard
-Built with Python, Dash, and Plotly in a Jupyter Notebook environment, the Student Performance Explorer Dashboard enables the visual analysis of this dataset. 
+Built with Python, Dash, and Plotly in a Jupyter Notebook environment, the Student Performance Explorer Dashboard enables the visual analysis of this dataset.
+Complete demonstration of the dashboard:
+https://drive.google.com/file/d/1DdUMEbTNcCZWa0LKsWUpXvT02o8BiETo/view?usp=sharing
 
 Key objectives include:
 * Visualizing complex student data interactively and intuitively.
