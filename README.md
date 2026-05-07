@@ -61,3 +61,12 @@ Open the **Anaconda Prompt** (Windows) or Terminal (Mac) and install the necessa
 pip install dash
 pip install dash-bootstrap-components
 pip install pandas
+```
+---
+
+## 📚 References
+* Lakhani, K. (2024). Sleep Patterns and Alertness in Class. *The International Journal of Indian Psychology*, 12(4). https://doi.org/10.25215/1204.157 
+* Mary, B. J. (2024, December 30). A Quantitative Study of the Impact of Daily Study Hours on Academic Performance Among High School Students. *ResearchGate*. 
+* Nath, J. (2025). Student Habits vs Academic Performance. *Kaggle.com*. https://www.kaggle.com/datasets/jayaantanaath/student-habits-vs-academic-performance/data 
+
+*The 'DataTales' logo and 'Analysis Flow' were designed with assistance from Google's Gemini 2.5 Pro.* 
