@@ -1,0 +1,237 @@
+/* --- Global & Theme --- */
+body, html {
+    background-color: #F0F7F4 !important; /* Richer background */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: #1A2530; 
+    scroll-behavior: smooth;
+}
+
+/* --- Neat Scrollbars --- */
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background-color: rgba(0,0,0,0.1); border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background-color: rgba(0,0,0,0.2); }
+
+/* --- Persistent Navbar --- */
+.app-navbar {
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+    padding: 0.8rem 0;
+    margin-bottom: 30px;
+}
+.nav-logo {
+    height: 40px; 
+}
+.nav-link {
+    color: #74b1fb; font-weight: 600; padding: 0.5rem 1.2rem; transition: all 0.3s ease; border-radius: 8px;
+    text-decoration: none;
+}
+.nav-link:hover { color: #2E86AB; background-color: rgba(46, 134, 171, 0.08); }
+.nav-link--active { color: #2E86AB !important; background-color: rgba(46, 134, 171, 0.12); }
+
+/* --- Landing Page --- */
+.landing-container { height: calc(100vh - 93px); display: flex; align-items: center; }
+.landing-header { font-weight: 800; font-size: 3.5rem; color: #212529; margin-bottom: 1rem; }
+.landing-subheader { font-size: 1.5rem; color: #1A936F; font-weight: 600; margin-bottom: 1rem; }
+.landing-text { font-size: 1.1rem; color: #6c757d; line-height: 1.7; margin-bottom: 2.5rem; }
+.landing-logo-container { display: flex; align-items: center; justify-content: center; height: 100%; }
+.landing-logo { max-width: 80%; height: auto; max-height: 300px; }
+
+/* --- Styled Card (For Graphs & Intro) --- */
+.styled-card {
+    border: none !important;
+    border-radius: 20px; /* Super rounded */
+    background-color: #FFFFFF;
+    box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.05); /* Soft, deep shadow */
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Bouncy transition */
+    overflow: hidden;
+    height: 100%;
+}
+.styled-card:hover {
+    transform: translateY(-8px) scale(1.01); /* Lift and slight grow */
+    box-shadow: 0 20px 40px -10px rgba(46, 134, 171, 0.15) !important; /* Colored shadow on hover */
+}
+
+/* --- Hero Gradients for Stat Cards --- */
+.gradient-primary { background: linear-gradient(135deg, #2E86AB, #1982C4); }
+.gradient-success { background: linear-gradient(135deg, #1A936F, #06D6A0); }
+.gradient-info { background: linear-gradient(135deg, #118AB2, #00C4CC); }
+.gradient-tertiary { background: linear-gradient(135deg, #A23B72, #6A4C93); }
+
+/* --- Dashboard Tabs --- */
+.tab-navigation-container {
+    display: flex; background-color: #FFFFFF; padding: 8px; border-radius: 16px;
+    box-shadow: 0 8px 20px -5px rgba(0,0,0,0.04); margin-bottom: 30px;
+}
+.custom-tab {
+    flex: 1; text-align: center; padding: 12px 20px; cursor: pointer; color: #6c757d;
+    font-weight: 600; border-radius: 12px; transition: all 0.3s ease;
+    border-bottom: none; /* Remove old border */
+}
+.custom-tab:hover { 
+    color: #2E86AB; 
+    background-color: rgba(46, 134, 171, 0.05); 
+}
+/* Active states specific to themes */
+.custom-tab--active {
+    font-weight: 700;
+    box-shadow: 0 5px 15px -5px rgba(46,134,171,0.3);
+}
+#tab-academic.custom-tab--active { background-color: #a3ddf0; color: #2E86AB; }
+#tab-lifestyle.custom-tab--active { background-color: #97eede; color: #1A936F; }
+#tab-socioeconomic.custom-tab--active { background-color: #f7cdab; color: #dd8a03; }
+
+
+/* --- Introduction Page Layout --- */
+.intro-section-white,
+.intro-band-blue,
+.intro-section-green {
+    margin-top: -20px; 
+    padding: 40px 0;
+}
+.intro-section-white:first-child { margin-top: 0; }
+.intro-section-white { background-color: #FFFFFF; border-bottom: 1px solid #dee2e6; }
+.intro-band-blue { background-color: #EAF6FA; border-top: 1px solid #d0e8f2; border-bottom: 1px solid #d0e8f2; }
+.intro-section-green { background-color: #F5FBF4; }
+
+.section-header {
+    font-weight: 700;
+    color: #2E86AB;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #1A936F;
+    display: inline-block;
+}
+
+/* --- 3D Flip Card for Variable Descriptions --- */
+.flip-card {
+    background-color: transparent;
+    width: 100%;
+    height: 190px;
+    perspective: 1000px;
+    margin-bottom: 24px;
+}
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transform-style: preserve-3d;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+}
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.flip-card-front {
+    background-color: #FFFFFF;
+    color: black;
+}
+.flip-card-back {
+    background-color: #c4e5fe; 
+    color: #056895;
+    transform: rotateY(180deg);
+}
+.flip-card-back h6 { font-weight: 700; color: #056895; }
+.flip-card-back p { font-size: 0.9rem; line-height: 1.5; }
+.theme-physical .flip-card-back { background-color: #E8F8F5; color: #1A936F; }
+.theme-physical .flip-card-back h6 { color: #1A936F; }
+.theme-wellbeing .flip-card-back { background-color: #F4ECF7; color: #A23B72; }
+.theme-wellbeing .flip-card-back h6 { color: #A23B72; }
+
+/* --- Sticky Dashboard Sidebar --- */
+.sticky-sidebar {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 100px; /* Distance from top of screen */
+    z-index: 1;
+}
+.sticky-sidebar .styled-card {
+    max-height: calc(100vh - 120px);
+    overflow-y: auto; /* Adds a scrollbar *if* needed */
+    scrollbar-width: thin;
+}
+
+/* --- NEW Intro Page Specific Styles --- */
+
+/* Section Headers in Intro */
+.section-header {
+    font-weight: 800;
+    color: #1A2530;
+    position: relative;
+    display: inline-block;
+}
+.section-header::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, #2E86AB, #06D6A0);
+    border-radius: 2px;
+}
+
+/* Framework Cards (The 4 boxes at the bottom) */
+.framework-card {
+    border-top-width: 5px !important; /* Thicker colored top border */
+    transition: transform 0.3s ease;
+}
+.framework-card.border-primary { border-top-color: #2E86AB !important; }
+.framework-card.border-success { border-top-color: #1A936F !important; }
+.framework-card.border-warning { border-top-color: #FF9F1C !important; }
+.framework-card.border-info { border-top-color: #A23B72 !important; }
+
+.framework-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px auto;
+    font-size: 1.8rem;
+}
+/* Soft background colors for icons */
+.bg-primary-soft { background-color: rgba(46, 134, 171, 0.15); color: #2E86AB; }
+.bg-success-soft { background-color: rgba(26, 147, 111, 0.15); color: #1A936F; }
+.bg-warning-soft { background-color: rgba(255, 159, 28, 0.15); color: #FF9F1C; }
+.bg-info-soft { background-color: rgba(162, 59, 114, 0.15); color: #A23B72; }
+
+/* Accordion Styling to match styled-card */
+.styled-accordion .accordion-item {
+    border: none !important;
+    background-color: transparent !important;
+}
+.styled-accordion .accordion-button {
+    background-color: #f8f9fa !important;
+    color: #2E86AB !important;
+    font-weight: 700;
+    border-radius: 12px !important;
+    margin-bottom: 10px;
+    box-shadow: none !important;
+}
+.styled-accordion .accordion-button:not(.collapsed) {
+    background-color: #EAF6FA !important; /* Light blue when open */
+    color: #1982C4 !important;
+}
+.styled-accordion .accordion-body {
+    padding-top: 0;
+    padding-bottom: 20px;
+}
